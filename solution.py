@@ -7,7 +7,7 @@ class ListNode:
 
 def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
     true_list = ListNode(0)
-    current = true_list
+    current = true_list # creates a copy because it needs to iterate through and true_list would stay at the start of the list
     while list1 and list2:
         if list1.val > list2.val:
             current.next = list2 # this is .next and not .val because .next is a List while val is just a value.
